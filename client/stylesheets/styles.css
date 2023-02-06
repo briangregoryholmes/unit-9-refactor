@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Kodchasan:wght@200&display=swap');
+:root {
+  --primary: 200;
+  --secondary: 180;
+  --font-color: hsl(var(--primary), 5%, 80%);
+  --card-background: hsl(var(--primary), 2%, 17%);
+  --border-radius: 10px;
+  --button-radius: 6px;
+  --background-color: hsl(var(--primary), 4%, 11%);
+  --border-color: hsl(var(--primary), 1%, 23%);
+  --button-font-color: hsl(var(--primary), 0%, 100%);
+  --customize-button: hsl(var(--primary), 3%, 14%);
+  --main-button: hsl(var(--secondary), 10%, 19%);
+  --image-border-color: hsl(var(--primary), 5%, 33%);
+  --hover-custom: hsl(var(--primary), 30%, 17%);
+  --custom-border: hsl(var(--primary), 31%, 27%);
+  --custom-button-font-color: hsl(var(--primary), 25%, 78%);
+  --hover-more: hsl(var(--secondary), 20%, 17%);
+  --more-border: hsl(var(--secondary), 15%, 27%);
+  --more-button-font-color: hsl(var(--secondary), 15%, 90%);
+}
+/* reset default styles */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  position: relative;
+}
+
+*:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+html {
+  background-color: black;
+  box-sizing: border-box;
+  font: 62.5% 'Source Sans Pro', sans-serif;
+}
+
+body {
+  margin: 0px;
+  line-height: 1.3;
+  font-family: 'Audiowide';
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+a,
+p,
+li,
+button,
+div {
+  font-size: 1.4rem;
+}
+
+small {
+  font-size: 1.2rem;
+}
+
+figure {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+button {
+  border-radius: 0;
+  background: transparent;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* app container styling */
+body {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background: var(--background-color);
+  color: #e4e4e4;
+}
+
+.mainSection {
+  margin-bottom: 5rem;
+}
+
+/* page options */
+.charactersPageOptions {
+  display: flex;
+  flex-direction: row;
+  grid-column-gap: 1.5rem;
+  justify-content: center;
+  margin-top: 3rem;
+}
+header {
+  text-align: center;
+}
+
+.charactersPageOptions button {
+  width: 100%;
+  max-width: 200px;
+  font-size: 14px;
+  padding: 1rem 1.5rem;
+}
+
+.card {
+  color: black;
+  background: #f3f3f3;
+  padding: 2rem;
+  border: 1px solid lightgray;
+  box-shadow: 1px 1px 5px rgba(17, 26, 64, 0.915);
+}
+
+/* button options */
+.btnMain {
+  color: var(--more-button-font-color);
+  background: var(--main-button);
+  border: 1px solid var(--more-border);
+  padding: 0.5rem 1rem;
+  height: 3rem;
+  border-radius: var(--button-radius);
+}
+.btnMain:hover {
+  background: var(--hover-more);
+}
+
+.btnSecondary {
+  color: white;
+  padding: 0.5rem 1rem;
+  height: 3rem;
+  border: solid 1px darkgrey;
+  border-radius: var(--button-radius);
+}
+.btnSecondary:hover {
+  cursor: pointer;
+  background-color: hsl(60, 21%, 22%);
+}
+
+.btnLg {
+  height: 5rem;
+}
+
+/* character photo */
+.charPhoto {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.charPhoto img {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  border: solid 1px var(--image-border-color);
+}
+
+/* custom character styles */
+.customCharContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.customizeChar {
+  max-width: 30rem;
+  width: 100%;
+  align-self: center;
+}
+
+/* nickname styles */
+.nicknameFields {
+  margin: 20px 0;
+}
+
+.nicknameFields label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.nicknameFields input {
+  padding: 15px 10px;
+  height: 14px;
+  max-width: 200px;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+/* cards container */
+.charContainer {
+  padding: 1rem 3rem;
+  display: grid;
+}
+
+/* character card container */
+.charCard {
+  background: var(--card-background);
+  border-radius: var(--border-radius);
+  display: grid;
+  color: var(--font-color);
+  grid-row-gap: 0.75rem;
+  margin: 0.5rem;
+  border: solid 1px var(--border-color);
+}
+
+/* character card header */
+.charHeadContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.charHeadContainer div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.charHeadContainer h3 {
+  margin: 0;
+}
+
+.charHeadContainer .favIcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.charHeadContainer .trashButton {
+  background-color: rgb(230, 230, 230);
+  border: 0.15em solid rgb(197, 197, 197);
+  padding: 0.2em;
+}
+
+.charHeadContainer .trashButton:hover {
+  background-color: rgb(212, 212, 212);
+  cursor: pointer;
+}
+
+/* character card photo */
+.charCard .charPhoto {
+  justify-content: center;
+}
+
+/* character buttons */
+.charBtnOptions {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+button {
+  font-family: 'Kodchasan';
+}
+
+.charBtnOptions .space {
+  margin-bottom: 1rem;
+}
+
+.charBtnOptions button {
+  width: 100%;
+}
+
+.charCustomizeButton {
+  background-color: var(--customize-button);
+  color: var(--custom-button-font-color);
+  border: 1px solid var(--custom-border);
+  border-radius: var(--button-radius);
+}
+
+.charCustomizeButton:hover {
+  background-color: var(--hover-custom);
+}
+
+.charDeleteButton {
+  padding: 0.5rem 1rem;
+  height: 3rem;
+  margin-top: 1rem;
+}
+
+/*
+  MEDIA QUERIES
+  0 - 600px - Mobile phones
+  600 - 900px - Tablet portrait
+  900 - 1200px - Tablet landscape
+  1200 - 1800px - Desktop - normal styles
+  1800px + Large desktop
+*/
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .charContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .charCard .charPhoto {
+    justify-content: flex-start;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .charContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Normal */
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+  .charContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Lg Screen */
+@media screen and (min-width: 1201px) {
+  .charContainer {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
